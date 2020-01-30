@@ -12,6 +12,7 @@ app.use(express.json({extended: true }));
 app.use('/api/usuarios', require('./src/routes/usuarios'));
 app.use('/api/auth', require('./src/routes/auth'));
 app.use('/api/proyectos', require('./src/routes/proyectos'));
+app.use('/api/tareas', require('./src/routes/tareas'));
 
 app.listen(PORT, () => {
     console.log(`app listening port:${PORT}`);
