@@ -14,9 +14,25 @@ router.post('/',
     proyectoController.crearProyecto
 );
 
+//Obtener proyectos
 router.get('/',
     auth,
     proyectoController.obtenerProyectos
+);
+
+//actualizar proyecto via ID
+router.get('/:id',
+    auth,
+    [
+        check('nombre', 'El nombre del proyecto es obligatorio').not().isEmpty()
+    ],
+    proyectoController.actualizarProyecto
+);
+
+//elimina un proyecto via ID
+router.delete('/:id',
+    auth,
+    proyectoController.eliminarProyecto
 );
 
 module.exports = router;
