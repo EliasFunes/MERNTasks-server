@@ -23,5 +23,5 @@ app.use('/api/proyectos', require('./src/routes/proyectos'));
 app.use('/api/tareas', require('./src/routes/tareas'));
 
 app.listen(port, '0.0.0.0', () => {
-    console.log(`app listening port:${PORT}`);
+    console.log(`app listening port:${port}`);
 });
