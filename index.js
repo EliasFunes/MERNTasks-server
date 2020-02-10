@@ -12,7 +12,7 @@ conectarDB();
 app.use(cors());
 
 //puerto de la app
-const port = process.env.port || 4000;
+const PORT = process.env.PORT || 4000;
 
 //Habilitar express.json
 app.use(express.json({extended: true }));
@@ -22,6 +22,6 @@ app.use('/api/auth', require('./src/routes/auth'));
 app.use('/api/proyectos', require('./src/routes/proyectos'));
 app.use('/api/tareas', require('./src/routes/tareas'));
 
-app.listen(port, '0.0.0.0', () => {
-    console.log(`app listening port:${port}`);
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`app listening port:${PORT}`);
 });
